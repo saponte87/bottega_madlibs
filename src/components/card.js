@@ -67,6 +67,6 @@ class Card extends Component {
             </div>
         )
     }
-}
+}2
 
 export default Card;
