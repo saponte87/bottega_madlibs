@@ -9,30 +9,24 @@ constructor() {
 
     this.state = {
         color: 'BLUE',
-        pluralNoun: '',
+        pluralNoun: ''
     }
 }
-
-handleInputChange() {
+ handleInputChange() {
     this.setState({ color: 'red' })
+    this.handleInputChange = this.handleInputChange.bind(this);
+} 
+ handleInputChange(event) {
+    this.setState({ color: event.target.value })
 }
-
-    render() {
-
-        return (
-            <div className="card">
+ render() {
+     return (
+        <div className="card">
             <h1>{this.state.color}</h1>
             <input/>
-            </div>
-        )
-
-        return (
-            <div className="card">
-                <h1>{this.state.color}</h1>
-                { Input ('Color') }
-                { Input('Plural Noun') }
-            </div>
-        )
+            <input value={this.state.color} onChange={(event) => this.handleInputChange(event)}/>
+        </div>
+    )
     }
 }
 
