@@ -106,11 +106,11 @@
 
     button {
         justify-self: center;
-        transform: translateY(50%);
     }
 
     &__generate {
         background-color: #00CB79;
+        transform: translateY(-300px);
         @include button;
     }
 
@@ -136,6 +136,7 @@
             background-color: black;
             border-radius: 50%;
             font-size: 14px;
+
             text-align: center;
             color: white;
             display: inline-block;
